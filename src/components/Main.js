@@ -30,9 +30,13 @@ class Main extends Component{
                     imageLink: "http://media1.santabanta.com/full2/Indian%20%20Celebrities(F)/Kareena%20Kapoor/kareena-kapoor-246a.jpg"
                 }]
         }
+        this.removePhoto = this.removePhoto.bind(this);
     };
     removePhoto(postRemoved){
         console.log(postRemoved.description);
+        this.setState((state) => ({
+            posts: state.posts.filter(post => post !== postRemoved )
+        }));
     };
     render(){
         return(<div>
