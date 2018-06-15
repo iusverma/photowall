@@ -1,0 +1,16 @@
+
+ 
+ ---
+ 
+ url("https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.eot?#iefix") format('embedded-opentype'), url("https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.woff") format('woff'), url("https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.ttf") format('truetype'), url("https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.svg#billabongregular") format('svg'); 
+ 
+ ReactDOM.render(
+ 			<Comments />, document.getElementById('container'));
+			
+			
+npm install -g create-react-app
+create-react-app
+sudo -u root npm install -g create-react-app
+create-react-app photowall
+cd photowall/
+npm start
