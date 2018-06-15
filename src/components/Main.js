@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import Photowall from './Photowall';
 import Title from './Title';
-import List from './List';
 
 const posts = [{
     id: "0",
@@ -22,8 +21,8 @@ const posts = [{
 class Main extends Component{
     render(){
         return(<div>
-                <Title title='Photowall'/>
-                <List tasks={['hello world','bye world']}/>
+                <Title title='Photowall' />
+                <Photowall posts={posts}/>
              </div>);
     }
 }
