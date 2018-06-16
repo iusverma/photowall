@@ -1,5 +1,6 @@
 import React from 'react';
 import Photo from './Photo';
+import PropTypes from 'prop-types';
 
 
 function Photowall (props){
@@ -12,4 +13,8 @@ function Photowall (props){
     );
 }
 
+Photowall.propTypes = {
+    posts: PropTypes.array.isRequired,
+    onPhotoRemoved: PropTypes.func.isRequired
+}
 export default Photowall;
