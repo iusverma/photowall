@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Main from './components/Main';
 import './styles/stylesheet.css';
+import {BrowserRouter} from 'react-router-dom';
 
 const tasks = ['First World','Second World','Third World'];
 
@@ -24,4 +25,4 @@ const element3 =
 ReactDOM.render(element3, document.getElementById('root'));
 
 // Creating & using class
-ReactDOM.render(<Main/>, document.getElementById('root'));
+ReactDOM.render(<BrowserRouter><Main/></BrowserRouter>, document.getElementById('root'));

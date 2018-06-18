@@ -2,22 +2,16 @@ import React, {Component} from 'react';
 import Photowall from './Photowall';
 import Title from './Title';
 import AddPhoto from './AddPhoto'
+import {Route} from 'react-router-dom';
 
 class Main extends Component{
     constructor(){
         super();
         this.state = {
-            posts: [],
-            screen: 'wall'// wall; addPhoto;
+            posts: []
         }
         this.removePhoto = this.removePhoto.bind(this);
-        this.addPhoto = this.addPhoto.bind(this);
         console.log('constructor');
-    };
-    addPhoto(){
-        this.setState({
-            screen: 'addPhoto'
-        });
     };
     removePhoto(postRemoved){
         console.log(postRemoved.description);
@@ -41,23 +35,15 @@ class Main extends Component{
         console.log('render');
         return(
             <div>
-                {
-                    this.state.screen === 'wall' && (
+                <Route exact path="/" render={() => (
                     <div>
                         <Title title='Photowall' />
                         <Photowall posts={this.state.posts}
-                                   onPhotoRemoved={this.removePhoto}
-                                   addPhoto={this.addPhoto}/>
+                                onPhotoRemoved={this.removePhoto}/>
                     </div>
-                    )
-                }
-                {
-                    this.state.screen === 'addPhoto' && (
-                    <div>
-                        <AddPhoto/>
-                    </div>
-                    )
-                }
+                )}/>
+
+                <Route path="/AddPhoto" component={AddPhoto}/>
             </div>
         );
     }
