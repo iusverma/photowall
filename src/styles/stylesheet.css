@@ -116,32 +116,13 @@ display: flex;
 align-items: center;
 justify-content: center;
 }
-.remove-button{
+button{
    flex-basis: 48%;
    color: red;
    font-size: 15px;
    border: 2px solid #f2f2f2;
    line-height: 2;
    padding: 5px; 
-}
-button, .button {
-border: 2px solid #f2f2f2;
-background: none;
-flex-basis: 48%;
-display: inline-block;
-line-height: 2;
-text-decoration: none;
-padding: 5px;
-text-align: center;
-font-size: 15px;
-color: red;
-transition: all 0.2s;
-box-sizing: padding-box;
-
-}
-button:hover,.button:hover, button:focus, .button:focus {
-border-color: #00f;
-outline: 0;
 }
 .speech-bubble {
 background: url("https://d30y9cdsu7xlg0.cloudfront.net/png/51904-200.png") center no-repeat;
@@ -176,29 +157,19 @@ padding: 15px;
 box-sizing: border-box;
 font-size: 14px;
 }
+
 .form button {
-font-family: "Roboto", sans-serif;
-text-transform: uppercase;
-outline: 0;
-background:#065784;
-width: 100%;
-border: 0;
-padding: 15px;
-color: #FFFFFF;
-font-size: 14px;
--webkit-transition: all 0.3 ease;
-transition: all 0.3 ease;
-cursor: pointer;
+    font-family: sans-serif;
+    width: 100%;
+    padding: 15px;
+    font-size: 14px;
+    cursor: pointer;
 }
-.form button:hover,.form button:active,.form button:focus {
-background: #7B8589;
+
+.form button:hover{
+    background: #7b8589
 }
-.loader {
-height: 20%;
-width: 100%;
-display: flex;
-position: fixed;
-align-items: center;
-justify-content: center;
-font-size: 28pt;
+
+button:hover{
+    border-color: blue;
 }
