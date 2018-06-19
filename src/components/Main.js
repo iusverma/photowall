@@ -38,6 +38,7 @@ class Main extends Component{
     }
     render(){
         console.log('render');
+        console.log(this.state.posts);
         return(
             <div>
                 <Route exact path="/" render={() => (
@@ -64,23 +65,23 @@ class Main extends Component{
 
 function SimulateFetchFromDatabase(){
     return [{
-        id: "0",
+        id: 0,
         description: "Alien??",
         imageLink: "http://media1.santabanta.com/full/hollywood%20movies/alien/ali2d.jpg"
     }, {
-        id: "1",
+        id: 1,
         description: "Universe!",
         imageLink: "http://media1.santabanta.com/full2/Nature/Universe/universe-71a.jpg"
     }, {
-        id: "2",
+        id: 2,
         description: "On a vacation!",
         imageLink: "http://media1.santabanta.com/full4/Nature/Architectural/architectural-85a.jpg"
     }, {
-        id: "3",
+        id: 3,
         description: "My Photography!",
         imageLink: "http://media1.santabanta.com/full2/Nature/Birds/birds-305a.jpg"
     }, {
-        id: "4",
+        id: 4,
         description: "Kareena Kapoor!",
         imageLink: "http://media1.santabanta.com/full2/Indian%20%20Celebrities(F)/Kareena%20Kapoor/kareena-kapoor-246a.jpg"
     }]

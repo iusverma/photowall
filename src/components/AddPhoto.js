@@ -10,7 +10,7 @@ class AddPhoto extends Component{
         const imgLink = event.target.elements.link.value;
         const description = event.target.elements.description.value;
         const post = {
-            id: 6,
+            id: Number(new Date),
             description: description,
             imageLink: imgLink
         }
@@ -19,19 +19,19 @@ class AddPhoto extends Component{
         }
     }
     render(){
-    return (
-        <div>
-            <h1> Photowall </h1>
+        return (
             <div>
-                <form className="form" onSubmit={this.handleSubmit}>
-                    <input type="text" placeholder="Link" name="link"/>
-                    <input type="text" placeholder="Description" name="description"/>
-                    <div className="button-container">
-                        <button>Post</button>
-                    </div>
-                </form>
+                <h1> Photowall </h1>
+                <div>
+                    <form className="form" onSubmit={this.handleSubmit}>
+                        <input type="text" placeholder="Link" name="link"/>
+                        <input type="text" placeholder="Description" name="description"/>
+                        <div className="button-container">
+                            <button>Post</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-        </div>
         );
     }
 }
