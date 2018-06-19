@@ -18,7 +18,12 @@ class Main extends Component{
         this.setState((state) => ({
             posts: state.posts.filter(post => post !== postRemoved )
         }));
-    };
+    }
+    addPhoto(postSubmitted){
+        this.setState(state => ({
+            posts: state.posts.concat([postSubmitted])
+        }));
+    }
     componentDidMount(){
         const data = SimulateFetchFromDatabase();
         this.setState({
@@ -43,7 +48,15 @@ class Main extends Component{
                     </div>
                 )}/>
 
-                <Route path="/AddPhoto" component={AddPhoto}/>
+                {/*<Route path="/AddPhoto" component={AddPhoto} />*/}
+                <Route path="/AddPhoto"  render={({history}) => (
+                    <div>
+                        <AddPhoto onAddPhoto={(addedPost) => {
+                            this.addPhoto(addedPost);
+                            history.push('/');
+                        }} />
+                    </div>
+                )}/>
             </div>
         );
     }
